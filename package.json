@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "bash ./build.sh --serve",
+    "build": "bash ./build.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-pug": "^1.0.0",
+    "@mermaid-js/mermaid-cli": "^11.12.0",
+    "jstransformer-markdown-it": "^3.0.0",
+    "marked": "^17.0.4",
+    "mermaid": "^11.13.0"
+  }
+}
