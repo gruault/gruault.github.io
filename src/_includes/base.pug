@@ -1,0 +1,10 @@
+doctype html
+html(lang="fr" data-bs-theme="light")
+  head
+    include _head.pug
+    title #{title} - Gaspard RUAULT
+  body.d-flex.flex-column.vh-100
+    if wip
+      include _components/wip.pug
+    | !{content}
+    include _components/footer.pug
