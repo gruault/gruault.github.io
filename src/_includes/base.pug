@@ -3,7 +3,7 @@ html(lang="fr" data-bs-theme="light")
   head
     include _head.pug
     title #{title} - Gaspard RUAULT
-  body.d-flex.flex-column.vh-100
+  body.d-flex.flex-column.vh-100.container
     if wip
       include _components/wip.pug
     | !{content}
