@@ -1,5 +1,7 @@
-div.mt-3.card(style="max-width: fit-content;")
-  div.card-header.text-bg-warning: strong ⚠️ Attention
-  div.card-body
-    p.card-text Cette page est encore en construction. Revenez plus tard pour voir les avancées !
-hr
+button.btn.btn-warning.position-fixed.top-0.start-0.m-2(type="button" data-bs-toggle="modal" data-bs-target="#wipmodal"): i.fas.fa-triangle-exclamation
+div#wipmodal.modal.fade(tabindex="-1" aria-labelledby="wipmodal" aria-hidden="true"): div.modal-dialog: div.modal-content
+  div.modal-header.text-bg-warning
+    h4#wipmodalLabel.modal-title Attention
+    button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+  div.modal-body: p Cette page est encore en construction.#[br]Revenez plus tard pour voir les avancées !
+  div.modal-footer: button.btn.btn-secondary(data-bs-dismiss="modal") Fermer
