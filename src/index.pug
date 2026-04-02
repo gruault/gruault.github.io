@@ -3,7 +3,16 @@ title: Accueil
 layout: "base.pug"
 wip: true
 ---
-section
+
+mixin techicon(icon,color)
+  i.fab.fa-xl(class=`fa-${icon}` style=`color: ${color ? color : "currentcolor"};`)
+
+mixin accordionItem(parent,id,title)
+  div.accordion-item
+    h2.accordion-header: button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target=`#${id}` aria-expanded="false" aria-controls=id)= title
+    div.accordion-collapse.collapse(id=id data-bs-parent=parent): div.accordion-body: block
+
+section.mt-3
   h4 Bonjour !
 
   :markdown Je suis [Gaspard RUAULT](https://linkedin.com/in/gruaultdev), 23 ans, actuellement en première année de BTS SIO à l'école [Iris Mediaschool de Reims](https://ecoleiris.fr/campus/reims), visant l'option SLAM.
@@ -18,3 +27,14 @@ section
     2. Solutions d'Infrastructure Systèmes et Réseaux (SISR), orientée administration réseau et systèmes
 
     La formation alterne entre théorie et pratique, avec un stage en entreprise obligatoire, et permet soit d'entrer directement dans la vie active, soit de poursuivre en licence pro, bachelor ou école d'ingénieurs.
+hr
+section.mt-3
+  h4 Mes compétences
+  p Ces compétences ont été acquises lors de mon parcours en tant qu'étudiant, mais aussi en autodidacte sur mon temps libre.
+  div#skills.accordion
+    +accordionItem("skills","languages","Langages"): ul.list-group.list-group-flush
+      li.list-group-item.text-bg-warning.rounded Contenu à venir
+    +accordionItem("skills","tools","Outils")
+      li.list-group-item.text-bg-warning.rounded Contenu à venir
+    +accordionItem("skills","software","Logiciels")
+      li.list-group-item.text-bg-warning.rounded Contenu à venir
