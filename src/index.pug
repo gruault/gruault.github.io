@@ -9,13 +9,13 @@ mixin techicon(icon,color)
 
 mixin accordionItem(parent,id,title)
   div.accordion-item
-    h2.accordion-header: button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target=`#${id}` aria-expanded="false" aria-controls=id)= title
+    h2.accordion-header: button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target=`#${id}` aria-expanded="false" aria-controls=id)= title
     div.accordion-collapse.collapse(id=id data-bs-parent=parent): div.accordion-body: block
 
 section.mt-3
   h4 Bonjour !
 
-  :markdown Je suis [Gaspard RUAULT](https://linkedin.com/in/gruaultdev), 23 ans, actuellement en première année de BTS SIO à l'école [Iris Mediaschool de Reims](https://ecoleiris.fr/campus/reims), visant l'option SLAM.
+  :markdown Je suis [Gaspard RUAULT](https://linkedin.com/in/gruaultdev), 23 ans, titulaire d'un BAC professionnel SN (Systèmes Numériques) et actuellement en première année de BTS SIO à l'école [Iris Mediaschool de Reims](https://ecoleiris.fr/campus/reims), visant l'option SLAM.
 
   h4 C'est quoi le BTS SIO ?
 
@@ -23,8 +23,8 @@ section.mt-3
     Le BTS SIO (Service Informatique aux Organisations) est un diplôme d'état de niveau BAC+2 préparant aux métiers de l'informatique.
 
     Il se divise en deux options :
-    1. Solutions Logicielles et Application Métier (SLAM), celle que j'ai choisie, orientée développement logiciel et programmation
-    2. Solutions d'Infrastructure Systèmes et Réseaux (SISR), orientée administration réseau et systèmes
+    1. SLAM (Solutions Logicielles et Application Métier), celle que j'ai choisie, orientée développement logiciel et programmation
+    2. SISR (Solutions d'Infrastructure Systèmes et Réseaux), orientée administration réseau et systèmes
 
     La formation alterne entre théorie et pratique, avec un stage en entreprise obligatoire, et permet soit d'entrer directement dans la vie active, soit de poursuivre en licence pro, bachelor ou école d'ingénieurs.
 hr
@@ -33,7 +33,12 @@ section.mt-3
   p Ces compétences ont été acquises lors de mon parcours en tant qu'étudiant, mais aussi en autodidacte sur mon temps libre.
   div#skills.accordion
     +accordionItem("skills","languages","Langages"): ul.list-group.list-group-flush
-      li.list-group-item.text-bg-warning.rounded Contenu à venir
+      li.list-group-item HTML / PugJS / Markdown
+      li.list-group-item CSS / Sass
+      li.list-group-item JavaScript / JQuery
+      li.list-group-item PHP
+      li.list-group-item Python
+      li.list-group-item Lua
     +accordionItem("skills","tools","Outils"): ul.list-group.list-group-flush
       li.list-group-item.text-bg-warning.rounded Contenu à venir
     +accordionItem("skills","software","Logiciels"): ul.list-group.list-group-flush
